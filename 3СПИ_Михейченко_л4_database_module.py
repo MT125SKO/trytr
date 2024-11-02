@@ -69,7 +69,6 @@ def delete_record(id):
         cursor.execute("DELETE FROM products WHERE id = ?", (id,))
         conn.commit()
 
-# Создание таблицы при запуске
 conn = create_connection(DATABASE_FILE)
 if conn is not None:
     create_table(conn)
